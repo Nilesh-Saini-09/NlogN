@@ -52,7 +52,8 @@ const containsDuplicate5 = nums => {
   let map = new Map();
 
   for(let i of nums) {
-    map.has(i) ? true : map.set(i);
+    if(map.has(i)) return true;
+    map.set(i);
   }
 
   return false;
