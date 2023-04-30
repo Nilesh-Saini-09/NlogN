@@ -72,3 +72,4 @@ const quickSort = arr => {
     // Concatenate the sorted partition and the pivot element 
     return sortedLessThanPivot.concat([pivot], sortedGreaterThanPivot);
 }
+
