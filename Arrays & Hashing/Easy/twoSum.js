@@ -1,4 +1,5 @@
 // 1. Brute force 
+// time O(N^2) space O(1)
 const twoSum = (nums, target) => {
     for (let i = 0; i < nums.length; i++) {
       for (let j = i + 1; j < nums.length; j++) {
@@ -12,6 +13,7 @@ const twoSum = (nums, target) => {
   };
 
   // 2. Array.indexOf() function
+  // time O(N^2) space O(1)
   const twoSum2 = (nums, target) => {
     for (let i = 0; i < nums.length; i++) {
         const diff = target - nums[i];
@@ -25,6 +27,7 @@ const twoSum = (nums, target) => {
   }
 
   // 3. Sorting and Two Pointers 
+  // time O(NlgN) space O(N)
   const twoSum3 = (nums, target) => {
     const sorted = [...nums].sort((a, b) => a - b);
 
@@ -55,6 +58,7 @@ const twoSum = (nums, target) => {
   };
   
   // 4. Using Map
+  // time O(N) space O(N)
   const twoSum4 = (nums, target) => {
     const map = new Map();
 
@@ -72,6 +76,7 @@ const twoSum = (nums, target) => {
 };
 
 // 5. Using a hash table
+// time O(N) space O(N)
 const twoSum5 = (nums, target) => {
     const hash = {};
 
