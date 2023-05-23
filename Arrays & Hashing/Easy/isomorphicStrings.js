@@ -12,7 +12,7 @@ const isIsomorphic1 = (s, t) => {
 }
 
 // 2. using maps
-const isIsomorphic = (s, t) => {
+const isIsomorphic2 = (s, t) => {
     if(s.length !== t.length) return false;
 
     const sMap = new Map();
@@ -30,6 +30,25 @@ const isIsomorphic = (s, t) => {
                 return false;
             }
         }
+    }
+
+    return true;
+}
+
+// 3. Frequency mappping
+const isIsomorphic = (s, t) => {
+    if(s.length !== t.length) return false;
+
+    let sFreq = {}, tFreq = {};
+
+    for(let i = 0; i < s.length; i++) {
+        const charS = s[i];
+        const charT = t[i];
+
+        if(sFreq[charS] !== tFreq[charT]) return false;
+
+        sFreq[charS] = i + 1;
+        tFreq[charT] = i + 1;
     }
 
     return true;
